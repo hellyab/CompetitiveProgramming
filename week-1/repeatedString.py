@@ -10,9 +10,9 @@ import sys
 def repeatedString(s, n):
     
     fullStringSetCount = n//len(s)
-    count = (fullStringSetCount * s.count("a")* len(s))//len(s)
+    count = fullStringSetCount * s.count("a")
     if fullStringSetCount*len(s)<n:
-        for i in range(n-fullStringSetCount*len(s)):
+        for i in range(n%len(s)):
             if s[i] == "a":
                 count+=1
     return count
