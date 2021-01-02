@@ -8,14 +8,15 @@ import sys
 
 # Complete the repeatedString function below.
 def repeatedString(s, n):
-    
-    fullStringSetCount = n//len(s)
-    count = fullStringSetCount * s.count("a")
-    if fullStringSetCount*len(s)<n:
-        for i in range(n%len(s)):
-            if s[i] == "a":
-                count+=1
-    return count
+    remainingACount = 0
+    count = 0
+    fullStringSetCount = n // len(s)
+    for i in range (len(s)):
+        if s[i] == "a":
+            if i < n % len(s) :
+                remainingACount +=1 
+            count += 1
+    return (count * fullStringSetCount) + remainingACount
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
