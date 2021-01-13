@@ -4,7 +4,7 @@ def insertion_sort(items):
         for j in range(i, -1, -1):
             if current_item < items[j]:
                 items[j+1] = items[j]
-            items[j] = current_item   
+                items[j] = current_item   
     print(items)
 
 insertion_sort([5,4,3,2,1])
