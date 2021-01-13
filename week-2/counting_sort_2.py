@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     result = countingSort(arr)
 
-    fptr.write(''.join(map(str, result)))
+    fptr.write(' '.join(map(str, result)))
     fptr.write('\n')
 
     fptr.close()
