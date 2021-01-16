@@ -13,7 +13,7 @@ def has_cycle2(head):
     slow = head
     fast = head
     while fast:
-        if fast == slow:
+        if fast == slow and slow !=head:
             return 1
         if not fast.next:
             return 0
